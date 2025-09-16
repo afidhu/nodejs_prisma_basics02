@@ -1,0 +1,24 @@
+
+npm init -y
+npm install typescript tsx @types/node --save-dev
+npx tsc --init
+npm install prisma --save-dev
+npx prisma init
+
+//////For migrate/////
+npx prisma migrate dev --name init
+
+///for track database
+npx prisma introspect --force
+
+
+
+
+///////////////////GIT
+echo "# nodejs_prisma_basics02" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/afidhu/nodejs_prisma_basics02.git
+git push -u origin main
