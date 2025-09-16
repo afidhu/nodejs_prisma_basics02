@@ -21,7 +21,31 @@ exports.getUsers = async (req, resp) => {
 
 }
 
+/////////Get user by id ////////////
+exports.getUserById = async (req, resp) => {
+   try {
+    const{id}= req.params;
+    const userData =await prisma.user.findUnique({
+        where:{
+            id:parseInt(id)
+        },
+        select:{
+            id:true,
+            username:true,
+            post:true
+        }
+    })
+ if(userData){
+    return resp.status(200).json(userData)
+ }else{
+    return resp.status(404).json({msg:'User not found'})
+ }
+    
+   } catch (error) {
+    return resp.status(500).json({msg:'Internal server error',error:error.message})
+   }
 
+}
 ///////////Create User ////////////
 
 exports.createUser =async(req, resp)=>{

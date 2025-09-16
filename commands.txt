@@ -24,7 +24,7 @@ npm install express
 echo "# nodejs_prisma_basics02" >> README.md
 git init
 git add .
-git commit -m "first add mvc"
+git commit -m "first add post model"
 git branch -M main
 git remote add origin https://github.com/afidhu/nodejs_prisma_basics02.git
 git push -u origin main
