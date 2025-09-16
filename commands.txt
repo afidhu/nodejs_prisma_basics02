@@ -11,6 +11,12 @@ npx prisma migrate dev --name init
 ///for track database
 npx prisma introspect --force
 
+////Prisma client
+npm install @prisma/client
+npx prisma generate
+
+/////////For Api
+npm install express
 
 
 
@@ -18,7 +24,7 @@ npx prisma introspect --force
 echo "# nodejs_prisma_basics02" >> README.md
 git init
 git add .
-git commit -m "first commit"
+git commit -m "first add mvc"
 git branch -M main
 git remote add origin https://github.com/afidhu/nodejs_prisma_basics02.git
 git push -u origin main
