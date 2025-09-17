@@ -7,7 +7,7 @@ exports.getUsers = async (req, resp) => {
         // include:{ post:true}
         select:{
             username:true,
-            post:true
+            post:true,
         },
          orderBy:{
             id:'desc'
@@ -66,7 +66,8 @@ exports.createUser =async(req, resp)=>{
         }else{
             const createResults = await prisma.user.create({
                 data:{
-                    username:username
+                    username:username,
+                
                 }
             })
 
